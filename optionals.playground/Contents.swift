@@ -17,15 +17,18 @@ let firstVowel = getFirstVowel(in: yourName)
 // TODO: Assign the underlying value of firstVowel to unwrappedVowelOne, unwrappedVowelTwo, and unwrappedVowelThree. Use a different method of unwrapping firstVowel each time.
 // v-- Insert code below here --v
 var unwrappedVowelOne: String
-if unwrappedVowelOne != nil {
-    print("The first vowel in '\(yourName)' is '\(unwrappedVowelOne!)'.")
+if let unwrappedVowelOne = firstVowel {
+    print("The first vowel in '\(yourName)' is '\(unwrappedVowelOne)'.")
+} else {
+    unwrappedVowelOne = "No vowels"
 }
 
-var unwrappedVowelTwo: String
+var unwrappedVowelTwo: String = (getFirstVowel(in: yourName) ?? "Kobie")
 
 var unwrappedVowelThree: String = firstVowel!
 
 // ^-- Insert code above here --^
 
-//print("The first vowel in '\(yourName)' is '\(unwrappedVowelTwo)'.")
+print("The first vowel in '\(yourName)' is '\(unwrappedVowelTwo)'.")
+
 print("The first vowel in '\(yourName)' is '\(unwrappedVowelThree)'.")
