@@ -1,6 +1,15 @@
 What kind of value does the function getFirstVowel return?
-	- 
+	- an optional string 
 
 Of the three ways that you unwrapped the value of firstVowel, which do you feel was most appropriate for this situation, and why?
+	- var unwrappedVowelThree: String = firstVowel!
+	- I think this was the best method for this situation because it's the quickest and the only draw back is if the name has no vowels, which is extremely rare in the english language
+
 
 This exercise assumes that you do, in fact, have a vowel (of the English language) in your name. What, if anything, would you need to change about the code if your name was "Bjørk" or "Ghrftnx"?
+	- you would need to write a function that has an else statement that handles it if there are no vowels. Like this one.
+
+if let unwrappedVowelOne = firstVowel {
+    print("The first vowel in '\(yourName)' is '\(unwrappedVowelOne)'.")
+} else {
+    unwrappedVowelOne = "you have no vowels in your name"

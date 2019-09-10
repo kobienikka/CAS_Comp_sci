@@ -20,7 +20,7 @@ var unwrappedVowelOne: String
 if let unwrappedVowelOne = firstVowel {
     print("The first vowel in '\(yourName)' is '\(unwrappedVowelOne)'.")
 } else {
-    unwrappedVowelOne = "No vowels"
+    unwrappedVowelOne = "you have no vowels in your name"
 }
 
 var unwrappedVowelTwo: String = (getFirstVowel(in: yourName) ?? "Kobie")
