@@ -39,4 +39,4 @@ func Numbername(number: Int) -> String{
     return(spellOutText)
 }
 
-print(Numbername(number: 8))
+print(Numbername(number: 72))
