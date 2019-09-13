@@ -1,4 +1,5 @@
 import UIKit
+import Foundation
 
 //#2
 func square(number: Float) -> Float{
@@ -30,4 +31,12 @@ func shout(sentence: String) -> String {
 print(shout(sentence: "Oh hey"))
 
 //#5
+func Numbername(number: Int) -> String{
+    let formatter = NumberFormatter()
+    formatter.numberStyle = NumberFormatter.Style.spellOut
+    
+    let spellOutText = formatter.string(for: number)!
+    return(spellOutText)
+}
 
+print(Numbername(number: 8))
