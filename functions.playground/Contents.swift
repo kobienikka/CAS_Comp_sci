@@ -31,12 +31,16 @@ func shout(sentence: String) -> String {
 print(shout(sentence: "Oh hey"))
 
 //#5
-func Numbername(number: Int) -> String{
-    let formatter = NumberFormatter()
-    formatter.numberStyle = NumberFormatter.Style.spellOut
+func Numbername(number: Int) -> String?{
+    if number < 10{
+        let formatter = NumberFormatter()
+        formatter.numberStyle = NumberFormatter.Style.spellOut
     
-    let spellOutText = formatter.string(for: number)!
-    return(spellOutText)
+        let spellOutText = formatter.string(for: number)!
+        return(spellOutText)
+    }else {
+        return(nil)
+    }
 }
 
-print(Numbername(number: 72))
+print(Numbername(number: 7)!)
