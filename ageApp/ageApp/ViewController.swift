@@ -10,7 +10,7 @@ import UIKit
 
 class ViewController: UIViewController {
     @IBOutlet weak var Switch: UISwitch!
-    var hadBirthday = false
+    var hadBirthday = true
     var age = 0
     
     override func viewDidLoad() {
@@ -38,14 +38,14 @@ class ViewController: UIViewController {
 
     
     @IBAction func calculateBirthYear(_ sender: Any) {
-        let age = Int(usersAge.text!)
+        let age = Int(usersAge.text ?? "0")
         var yearOfBirth = 0
         if hadBirthday {
             yearOfBirth = 2019 - age!
-        } else {
-            yearOfBirth = (2019 - age!) + 1
+        } else {t
+            yearOfBirth = 2019 - (age ?? 0) + 1
         }
-        birthYear.text = ("you were born in:, \(yearOfBirth)")
+        birthYear.text = ("you were born in: \(yearOfBirth)")
     }
 }
 
