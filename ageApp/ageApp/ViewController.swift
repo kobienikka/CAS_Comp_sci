@@ -29,7 +29,7 @@ class ViewController: UIViewController {
     @IBAction func birthdaySwitch(_ sender: UISwitch) {
         if Switch.isOn{
          hadBirthday = true
-        }else{
+        } else {
          hadBirthday = false
         }
     }
@@ -42,10 +42,9 @@ class ViewController: UIViewController {
         var yearOfBirth = 0
         if hadBirthday {
             yearOfBirth = 2019 - age!
-        } else {t
+        } else {
             yearOfBirth = 2019 - (age ?? 0) + 1
         }
         birthYear.text = ("you were born in: \(yearOfBirth)")
     }
 }
-
