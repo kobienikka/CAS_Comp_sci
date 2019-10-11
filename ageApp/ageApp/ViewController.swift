@@ -13,12 +13,9 @@ class ViewController: UIViewController {
     var hadBirthday = true
     var age = 0
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        // Do any additional setup after loading the view.
-    }
-    
 
+    
+    
     @IBOutlet weak var usersAge: UILabel!
     
     @IBAction func ageStepper(_ sender: UIStepper) {
@@ -28,23 +25,32 @@ class ViewController: UIViewController {
     
     @IBAction func birthdaySwitch(_ sender: UISwitch) {
         if Switch.isOn{
-         hadBirthday = true
+            hadBirthday = true
         } else {
-         hadBirthday = false
+            hadBirthday = false
         }
     }
     
     @IBOutlet weak var birthYear: UILabel!
-
+    
     
     @IBAction func calculateBirthYear(_ sender: Any) {
-        let age = Int(usersAge.text ?? "0")
-        var yearOfBirth = 0
-        if hadBirthday {
-            yearOfBirth = 2019 - age!
-        } else {
-            yearOfBirth = 2019 - (age ?? 0) + 1
+        let myText = usersAge.text
+        print(myText)
+
+        
+        if let age = Float(usersAge.text!){
+            var yearOfBirth:Float = 0.0
+            if hadBirthday {
+                yearOfBirth = 2019 - age
+            } else {
+                yearOfBirth = 2019 - (age ?? 0) - 1
+            }
+            birthYear.text = ("you were born in: \(yearOfBirth)")
+        }else{
+//            print("something went wrong.")
+            birthYear.text = (myText)
+
         }
-        birthYear.text = ("you were born in: \(yearOfBirth)")
     }
 }
