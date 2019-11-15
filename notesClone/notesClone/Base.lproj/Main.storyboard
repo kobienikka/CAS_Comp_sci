@@ -33,6 +33,7 @@
                             <outlet property="delegate" destination="B9t-Ih-zR5" id="S7Q-fF-0Tc"/>
                         </connections>
                     </tableView>
+                    <navigationItem key="navigationItem" id="yXS-RW-Hw0"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cZF-9e-OoI" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -43,7 +44,7 @@
             <objects>
                 <viewController id="H9D-jQ-Fbh" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="F7l-WC-uFO">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="0rs-Kx-Ktc"/>
@@ -62,6 +63,9 @@
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
+                    <connections>
+                        <segue destination="B9t-Ih-zR5" kind="relationship" relationship="rootViewController" id="Ws3-hh-AdJ"/>
+                    </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xGw-Cm-lev" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
