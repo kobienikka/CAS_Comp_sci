@@ -50,7 +50,8 @@ class TableViewController: UITableViewController {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
         
         let title = notes[indexPath.row]
-        cell.textLabel!.text = title.note
+        cell.textLabel!.text = "\(title.date) - \(title.note)"
+//        cell.textLabel!.text = title.note
 
         return cell
     }
@@ -89,14 +90,27 @@ class TableViewController: UITableViewController {
         return true
     }
     */
+    
+    override func viewWillAppear(_ animated: Bool) {
+//        self.tableView.reloadDate()
+    }
 
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-         let vc = segue.destination as!ViewController
-            let indexPath = tableView.indexPathForSelectedRow
-            let note = notes[indexPath!.row]
-            vc.note = note    }
+        let vc = segue.destination as! ViewController
+        if let indexPath = self.tableView.indexPathForSelectedRow {
+            let note = notes[indexPath.row]
+            vc.note = note
+        }
+        else {
+            let note = Note()
+            notes.append(note)
+            vc.note = note
+//            print(notes.count)
+        }
+        
+    }
 
 }

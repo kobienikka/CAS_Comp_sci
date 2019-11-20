@@ -33,7 +33,15 @@
                             <outlet property="delegate" destination="B9t-Ih-zR5" id="S7Q-fF-0Tc"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="yXS-RW-Hw0"/>
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" id="yXS-RW-Hw0">
+                        <barButtonItem key="rightBarButtonItem" title="Item" image="pencil" catalog="system" id="mIx-Fe-XZm">
+                            <connections>
+                                <segue destination="H9D-jQ-Fbh" kind="show" id="zLa-iR-o9c"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cZF-9e-OoI" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -42,8 +50,8 @@
         <!--View Controller-->
         <scene sceneID="fVR-nt-XUT">
             <objects>
-                <viewController id="H9D-jQ-Fbh" customClass="ViewController" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="F7l-WC-uFO" customClass="UIViewcontroller">
+                <viewController id="H9D-jQ-Fbh" customClass="ViewController" customModule="notesClone" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="F7l-WC-uFO">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
@@ -61,6 +69,9 @@
                         <viewLayoutGuide key="safeArea" id="0rs-Kx-Ktc"/>
                     </view>
                     <navigationItem key="navigationItem" id="5NU-F8-eYT"/>
+                    <connections>
+                        <outlet property="textView" destination="YCn-TT-zNC" id="4K7-8z-sFm"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iiD-so-oNc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -83,4 +94,10 @@
             <point key="canvasLocation" x="-668" y="198"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="pencil" catalog="system" width="64" height="56"/>
+    </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="gkd-zn-DF3"/>
+    </inferredMetricsTieBreakers>
 </document>
