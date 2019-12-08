@@ -24,13 +24,21 @@ class ViewController: UIViewController {
         }
         
         // This just puts the file contents (unparsed) into the label.
-        if let string = jsonFileString {
-            myLabel.text = string
-        }
+//        if let string = jsonFileString {
+//            myLabel.text = string
+//        }
         
         if let data = jsonFileData {
             // TODO: Parse the JSON data and display it in the app.
+            let json = try? JSONSerialization.jsonObject(with: jsonFileData!, options: [])
+            let dictionary = json as! [String: Any]
             
+            let fruit = dictionary["fruit"] as! String
+            let iceCreamFlavors = dictionary["iceCreamFlavors"] as! [String]
+            let totalFruits = dictionary["totalFruits"] as! Int
+            
+            let string = "My favorite fruit is \(fruit), I have \(totalFruits) of them. But what I like more than fruit is ice cream, my favorite flavors include: \(iceCreamFlavors.joined(separator: ", "))."
+            myLabel.text = string
         }
     }
 

@@ -1,8 +1,9 @@
 {
 "fruit": "peach",
-"Ice Cream Flavors": [
+"iceCreamFlavors": [
     "Coffee",
     "Chunky Monkey",
     "Cookies N Cream"
 ],
-"Total Fruits": 76
+"totalFruits": 76
+}
