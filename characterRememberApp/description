@@ -4,4 +4,4 @@ When you open the app you are prompted to create a new character. If you fill in
 
 --What doesn't Work--
 My table view cells arent populating with the characters names because I'm having trouble loading the data(array of dictionaries) from the url into the table view.
-      - if this were to get solved I think the rest of my program would work, but I can't be sure because I'm unable to test           it.
+      - if this were to get solved I think the rest of my program would work, but I can't be sure because I'm unable to test it.
