@@ -19,28 +19,62 @@ class TableViewController: UITableViewController {
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
     }
+    
+    
+ 
 
     // MARK: - Table view data source
+    
+    func getFileURL() -> URL? {
+        let docDirectory = try? FileManager.default.url(for: .documentDirectory, in: .userDomainMask, appropriateFor: nil, create: false)
+        if docDirectory != nil {
+            return docDirectory!.appendingPathComponent("newSaveFile.json")
+        }
+        return nil
+    }
 
     override func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
-        return 0
+        return 1
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 0
+        var totalCharacters = 0
+        if let url = getFileURL(){
+                    let data = try? Data(contentsOf: url)
+                    if let data = data {
+        //                print(try? JSONSerialization.jsonObject(with: data, options: []))
+                        guard let allData = try? JSONSerialization.jsonObject(with: data, options: []) as? [[String:String]]
+                        else {
+                            return 0
+                        }
+                    
+                    totalCharacters = allData.count
+            }
+        }
+        return totalCharacters
     }
-
-    /*
+    
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
-
+        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
+        let indexPath = self.tableView.indexPathForSelectedRow
         // Configure the cell...
-
+        if let url = getFileURL(){
+                    let data = try? Data(contentsOf: url)
+                    if let data = data {
+                        let allData = try? JSONSerialization.jsonObject(with: data, options: []) as? [[String:String]]
+                        if allData == allData {
+                            let dict = allData![indexPath!.row - 1]
+                            let title = dict["name"]
+                            cell.textLabel!.text = title
+                        }
+        
+                }
+            }
         return cell
-    }
-    */
+        }
+
 
     /*
     // Override to support conditional editing of the table view.
@@ -77,14 +111,17 @@ class TableViewController: UITableViewController {
     }
     */
 
-    /*
+
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the new view controller using segue.destination.
+        let vc = segue.destination as! ViewController
         // Pass the selected object to the new view controller.
+        let indexPath = self.tableView.indexPathForSelectedRow
+        vc.rowNum = (indexPath!.row) - 1
     }
-    */
+
 
 }
