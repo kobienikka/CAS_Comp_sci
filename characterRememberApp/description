@@ -1,0 +1,7 @@
+--App Description--
+When you open the app you are prompted to create a new character. If you fill in all the text boxes and click save it wil display your characters info on the label above. You can then click the character list on the top right and it will take you to a table view. In the table view, each cell should display the name of a character you've made. If you click on a character in the table view it should take you back to the view controller and display that characters info in the label. 
+
+
+--What doesn't Work--
+My table view cells arent populating with the characters names because I'm having trouble loading the data(array of dictionaries) from the url into the table view.
+      - if this were to get solved I think the rest of my program would work, but I can't be sure because I'm unable to test it.
