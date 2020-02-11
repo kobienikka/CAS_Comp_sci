@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="eg2-xr-UZi">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15510"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="DynamicStackView" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="viq-im-y2u" userLabel="Button1">
+                                <rect key="frame" x="0.0" y="88" width="414" height="387"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="35"/>
+                                <state key="normal" title="Button 1"/>
+                                <connections>
+                                    <segue destination="2u9-4Z-OMK" kind="show" id="K24-BL-tCy"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="b89-nd-gnG" userLabel="Button2">
+                                <rect key="frame" x="0.0" y="475" width="414" height="387"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="35"/>
+                                <state key="normal" title="Button 2"/>
+                                <connections>
+                                    <segue destination="L3f-DW-MQP" kind="show" id="2oN-C3-67c"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="viq-im-y2u" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="9q9-lK-bc5"/>
+                            <constraint firstItem="b89-nd-gnG" firstAttribute="width" secondItem="viq-im-y2u" secondAttribute="width" id="AFd-mE-vN5"/>
+                            <constraint firstItem="viq-im-y2u" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="CkS-2v-soX"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="b89-nd-gnG" secondAttribute="trailing" id="GC2-rZ-PNu"/>
+                            <constraint firstItem="viq-im-y2u" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="HFD-JM-Yaz"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="b89-nd-gnG" secondAttribute="bottom" id="Isx-7G-wUh"/>
+                            <constraint firstItem="b89-nd-gnG" firstAttribute="top" secondItem="viq-im-y2u" secondAttribute="bottom" id="Kb2-bQ-W99"/>
+                            <constraint firstItem="b89-nd-gnG" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="KsH-1q-6Vs"/>
+                            <constraint firstItem="b89-nd-gnG" firstAttribute="height" secondItem="viq-im-y2u" secondAttribute="height" id="oOh-ez-ywH"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="03V-mH-ie4"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1047.8260869565217" y="117.85714285714285"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="EyM-CT-Hf4">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="eg2-xr-UZi" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="uuU-Qc-GYt">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="c21-Gw-kAl"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="n5k-LJ-8Cy" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="137.68115942028987" y="117.85714285714285"/>
+        </scene>
+        <!--Stack View Controller-->
+        <scene sceneID="5Bp-S8-b3m">
+            <objects>
+                <viewController id="2u9-4Z-OMK" customClass="StackViewController" customModule="DynamicStackView" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="H7A-MW-7fx">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="rWu-Hv-DiL">
+                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="rvR-qN-SUz" firstAttribute="trailing" secondItem="rWu-Hv-DiL" secondAttribute="trailing" id="3wF-KV-jm7"/>
+                            <constraint firstItem="rWu-Hv-DiL" firstAttribute="top" secondItem="rvR-qN-SUz" secondAttribute="top" id="8Mi-dg-Ksm"/>
+                            <constraint firstItem="rWu-Hv-DiL" firstAttribute="leading" secondItem="rvR-qN-SUz" secondAttribute="leading" id="IBw-MU-4xW"/>
+                            <constraint firstItem="rvR-qN-SUz" firstAttribute="bottom" secondItem="rWu-Hv-DiL" secondAttribute="bottom" id="O0l-Yu-fbb"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="rvR-qN-SUz"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="MRa-Jr-xhk"/>
+                    <connections>
+                        <outlet property="stackView" destination="rWu-Hv-DiL" id="isw-iL-oO8"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="iFH-5E-rSi" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2048" y="-301"/>
+        </scene>
+        <!--Second Stack View Controller-->
+        <scene sceneID="NIx-92-xEI">
+            <objects>
+                <viewController id="L3f-DW-MQP" customClass="SecondStackViewController" customModule="DynamicStackView" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="0md-WE-SsU">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="KK0-kk-eSn">
+                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="KK0-kk-eSn" firstAttribute="top" secondItem="auf-cc-3Dj" secondAttribute="top" id="Rl6-6X-mky"/>
+                            <constraint firstItem="auf-cc-3Dj" firstAttribute="trailing" secondItem="KK0-kk-eSn" secondAttribute="trailing" id="V8y-TZ-D2r"/>
+                            <constraint firstItem="KK0-kk-eSn" firstAttribute="leading" secondItem="auf-cc-3Dj" secondAttribute="leading" id="kBG-FU-a1n"/>
+                            <constraint firstItem="auf-cc-3Dj" firstAttribute="bottom" secondItem="KK0-kk-eSn" secondAttribute="bottom" id="sTY-Md-j14"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="auf-cc-3Dj"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="CBC-py-p96"/>
+                    <connections>
+                        <outlet property="stackView" destination="KK0-kk-eSn" id="LuW-mf-eQC"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="agm-zl-ybX" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2048" y="402"/>
+        </scene>
+    </scenes>
+</document>
