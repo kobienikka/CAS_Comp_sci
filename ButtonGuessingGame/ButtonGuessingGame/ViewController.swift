@@ -10,7 +10,7 @@ import UIKit
 
 class ViewController: UIViewController {
     var buttonsForGame: Int?
-    var answer: String?
+    var answer: Int?
     
     @IBOutlet weak var stackView: UIStackView!
     @IBOutlet weak var scrollView: UIScrollView!
@@ -20,33 +20,31 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view.
         print("Cheat Code: The Answer is \(answer!)")
         for i in 1...buttonsForGame! {
-            let newButton = UIButton()
+            let newButton = ButtonValue()
             newButton.setTitle("Button \(i)", for: .normal)
             newButton.frame = CGRect(x: 0, y: 0, width: 363, height: 50)
-            newButton.setTitleColor(UIColor(displayP3Red: 0, green: 0, blue: 1, alpha: 1), for: .normal)
-            newButton.backgroundColor = UIColor(red: 50/255, green: 50/255, blue: 150/255, alpha: 1)
-//            newButton.tag = i
+            newButton.setTitleColor(UIColor(displayP3Red: 8/255, green: 39/255, blue: 60/255, alpha: 1), for: .normal)
+            newButton.backgroundColor = UIColor(red: 80/255, green: 255/255, blue: 247/255, alpha: 1)
             newButton.addTarget(self, action: #selector(whichButtonWasClicked), for: .touchUpInside)
+            newButton.value = i
             stackView.addArrangedSubview(newButton)
         }
         stackView.frame = CGRect(x: 0, y: 0, width: 363, height: (50 * buttonsForGame!))
         scrollView.contentSize = CGSize(width: 363, height: (50 * buttonsForGame!))
     }
     
-    @objc func whichButtonWasClicked(_ sender: UIButton) {
-        var numOfButton: String?
-        let buttonTitle = sender.titleLabel?.text!
-        if buttonTitle!.count == 8 {
-            numOfButton = String(buttonTitle!.suffix(1))
-        } else {
-            numOfButton = String(buttonTitle!.suffix(2))
-        }
-        
-        if numOfButton == answer! {
+    @objc func whichButtonWasClicked(_ sender: ButtonValue) {
+        if sender.value == answer! {
+            sender.backgroundColor = UIColor(red: 133/255, green: 1, blue: 61/255, alpha: 1)
             buttonGuessedCorrect()
-        } else {
-            buttonGuessedWrong()
+        } else if sender.value < answer! {
+            sender.backgroundColor = UIColor(red: 1, green: 0, blue: 0, alpha: 1)
+            buttonGuessedWrongLow()
+        } else if sender.value > answer! {
+            sender.backgroundColor = UIColor(red: 1, green: 0, blue: 0, alpha: 1)
+            buttonGuessedWrongHigh()
         }
+        sender.isEnabled = false
     }
 
     @objc func buttonGuessedCorrect() {
@@ -55,8 +53,14 @@ class ViewController: UIViewController {
         self.present(alert, animated: true, completion: {})
     }
     
-    @objc func buttonGuessedWrong() {
-        let alert = UIAlertController(title: "Try Again", message: "You guessed the wrong button", preferredStyle: .alert)
+    @objc func buttonGuessedWrongLow() {
+        let alert = UIAlertController(title: "Try Again", message: "Your guess was to low. Guess a higher number", preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "Guess Again", style: .default, handler: {(_) in return}))
+        self.present(alert, animated: true, completion: {})
+    }
+    
+    @objc func buttonGuessedWrongHigh() {
+        let alert = UIAlertController(title: "Try Again", message: "Your guess was to high. Guess a smaller number", preferredStyle: .alert)
         alert.addAction(UIAlertAction(title: "Guess Again", style: .default, handler: {(_) in return}))
         self.present(alert, animated: true, completion: {})
     }

@@ -36,7 +36,7 @@ class ViewControllerMenu: UIViewController {
         let vc = segue.destination as! ViewController
         // Pass the selected object to the new view controller.
         vc.buttonsForGame = totalButtons
-        vc.answer = "\(Int.random(in: 1 ... totalButtons!))"
+        vc.answer = Int.random(in: 1 ... totalButtons!)
     }
 
 }
