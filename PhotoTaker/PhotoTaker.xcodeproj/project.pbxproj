@@ -7,31 +7,27 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		8BB265BD23FB47B700695D54 /* ButtonValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BB265BC23FB47B700695D54 /* ButtonValue.swift */; };
-		8BDF976A23F4747300680246 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BDF976923F4747300680246 /* AppDelegate.swift */; };
-		8BDF976C23F4747300680246 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BDF976B23F4747300680246 /* SceneDelegate.swift */; };
-		8BDF976E23F4747300680246 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BDF976D23F4747300680246 /* ViewController.swift */; };
-		8BDF977123F4747300680246 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8BDF976F23F4747300680246 /* Main.storyboard */; };
-		8BDF977323F4747500680246 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8BDF977223F4747500680246 /* Assets.xcassets */; };
-		8BDF977623F4747500680246 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8BDF977423F4747500680246 /* LaunchScreen.storyboard */; };
-		8BDF977E23F4760400680246 /* ViewControllerMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BDF977D23F4760400680246 /* ViewControllerMenu.swift */; };
+		8B2EFF5423FEFC2400865DA7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B2EFF5323FEFC2400865DA7 /* AppDelegate.swift */; };
+		8B2EFF5623FEFC2400865DA7 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B2EFF5523FEFC2400865DA7 /* SceneDelegate.swift */; };
+		8B2EFF5823FEFC2400865DA7 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B2EFF5723FEFC2400865DA7 /* ViewController.swift */; };
+		8B2EFF5B23FEFC2400865DA7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8B2EFF5923FEFC2400865DA7 /* Main.storyboard */; };
+		8B2EFF5D23FEFC2C00865DA7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8B2EFF5C23FEFC2C00865DA7 /* Assets.xcassets */; };
+		8B2EFF6023FEFC2C00865DA7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8B2EFF5E23FEFC2C00865DA7 /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		8BB265BC23FB47B700695D54 /* ButtonValue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonValue.swift; sourceTree = "<group>"; };
-		8BDF976623F4747300680246 /* ButtonGuessingGame.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ButtonGuessingGame.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		8BDF976923F4747300680246 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		8BDF976B23F4747300680246 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		8BDF976D23F4747300680246 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		8BDF977023F4747300680246 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		8BDF977223F4747500680246 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		8BDF977523F4747500680246 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		8BDF977723F4747500680246 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		8BDF977D23F4760400680246 /* ViewControllerMenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerMenu.swift; sourceTree = "<group>"; };
+		8B2EFF5023FEFC2400865DA7 /* PhotoTaker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PhotoTaker.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		8B2EFF5323FEFC2400865DA7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		8B2EFF5523FEFC2400865DA7 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		8B2EFF5723FEFC2400865DA7 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		8B2EFF5A23FEFC2400865DA7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		8B2EFF5C23FEFC2C00865DA7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		8B2EFF5F23FEFC2C00865DA7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		8B2EFF6123FEFC2C00865DA7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		8BDF976323F4747300680246 /* Frameworks */ = {
+		8B2EFF4D23FEFC2400865DA7 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -41,74 +37,72 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		8BDF975D23F4747300680246 = {
+		8B2EFF4723FEFC2300865DA7 = {
 			isa = PBXGroup;
 			children = (
-				8BDF976823F4747300680246 /* ButtonGuessingGame */,
-				8BDF976723F4747300680246 /* Products */,
+				8B2EFF5223FEFC2400865DA7 /* PhotoTaker */,
+				8B2EFF5123FEFC2400865DA7 /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		8BDF976723F4747300680246 /* Products */ = {
+		8B2EFF5123FEFC2400865DA7 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				8BDF976623F4747300680246 /* ButtonGuessingGame.app */,
+				8B2EFF5023FEFC2400865DA7 /* PhotoTaker.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		8BDF976823F4747300680246 /* ButtonGuessingGame */ = {
+		8B2EFF5223FEFC2400865DA7 /* PhotoTaker */ = {
 			isa = PBXGroup;
 			children = (
-				8BDF976923F4747300680246 /* AppDelegate.swift */,
-				8BDF976B23F4747300680246 /* SceneDelegate.swift */,
-				8BDF976D23F4747300680246 /* ViewController.swift */,
-				8BDF977D23F4760400680246 /* ViewControllerMenu.swift */,
-				8BB265BC23FB47B700695D54 /* ButtonValue.swift */,
-				8BDF976F23F4747300680246 /* Main.storyboard */,
-				8BDF977223F4747500680246 /* Assets.xcassets */,
-				8BDF977423F4747500680246 /* LaunchScreen.storyboard */,
-				8BDF977723F4747500680246 /* Info.plist */,
+				8B2EFF5323FEFC2400865DA7 /* AppDelegate.swift */,
+				8B2EFF5523FEFC2400865DA7 /* SceneDelegate.swift */,
+				8B2EFF5723FEFC2400865DA7 /* ViewController.swift */,
+				8B2EFF5923FEFC2400865DA7 /* Main.storyboard */,
+				8B2EFF5C23FEFC2C00865DA7 /* Assets.xcassets */,
+				8B2EFF5E23FEFC2C00865DA7 /* LaunchScreen.storyboard */,
+				8B2EFF6123FEFC2C00865DA7 /* Info.plist */,
 			);
-			path = ButtonGuessingGame;
+			path = PhotoTaker;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		8BDF976523F4747300680246 /* ButtonGuessingGame */ = {
+		8B2EFF4F23FEFC2400865DA7 /* PhotoTaker */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 8BDF977A23F4747500680246 /* Build configuration list for PBXNativeTarget "ButtonGuessingGame" */;
+			buildConfigurationList = 8B2EFF6423FEFC2C00865DA7 /* Build configuration list for PBXNativeTarget "PhotoTaker" */;
 			buildPhases = (
-				8BDF976223F4747300680246 /* Sources */,
-				8BDF976323F4747300680246 /* Frameworks */,
-				8BDF976423F4747300680246 /* Resources */,
+				8B2EFF4C23FEFC2400865DA7 /* Sources */,
+				8B2EFF4D23FEFC2400865DA7 /* Frameworks */,
+				8B2EFF4E23FEFC2400865DA7 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = ButtonGuessingGame;
-			productName = ButtonGuessingGame;
-			productReference = 8BDF976623F4747300680246 /* ButtonGuessingGame.app */;
+			name = PhotoTaker;
+			productName = PhotoTaker;
+			productReference = 8B2EFF5023FEFC2400865DA7 /* PhotoTaker.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		8BDF975E23F4747300680246 /* Project object */ = {
+		8B2EFF4823FEFC2300865DA7 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 1120;
 				LastUpgradeCheck = 1120;
 				ORGANIZATIONNAME = "Kobie Nikka";
 				TargetAttributes = {
-					8BDF976523F4747300680246 = {
+					8B2EFF4F23FEFC2400865DA7 = {
 						CreatedOnToolsVersion = 11.2.1;
 					};
 				};
 			};
-			buildConfigurationList = 8BDF976123F4747300680246 /* Build configuration list for PBXProject "ButtonGuessingGame" */;
+			buildConfigurationList = 8B2EFF4B23FEFC2300865DA7 /* Build configuration list for PBXProject "PhotoTaker" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -116,57 +110,55 @@
 				en,
 				Base,
 			);
-			mainGroup = 8BDF975D23F4747300680246;
-			productRefGroup = 8BDF976723F4747300680246 /* Products */;
+			mainGroup = 8B2EFF4723FEFC2300865DA7;
+			productRefGroup = 8B2EFF5123FEFC2400865DA7 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				8BDF976523F4747300680246 /* ButtonGuessingGame */,
+				8B2EFF4F23FEFC2400865DA7 /* PhotoTaker */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		8BDF976423F4747300680246 /* Resources */ = {
+		8B2EFF4E23FEFC2400865DA7 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8BDF977623F4747500680246 /* LaunchScreen.storyboard in Resources */,
-				8BDF977323F4747500680246 /* Assets.xcassets in Resources */,
-				8BDF977123F4747300680246 /* Main.storyboard in Resources */,
+				8B2EFF6023FEFC2C00865DA7 /* LaunchScreen.storyboard in Resources */,
+				8B2EFF5D23FEFC2C00865DA7 /* Assets.xcassets in Resources */,
+				8B2EFF5B23FEFC2400865DA7 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		8BDF976223F4747300680246 /* Sources */ = {
+		8B2EFF4C23FEFC2400865DA7 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8BDF976E23F4747300680246 /* ViewController.swift in Sources */,
-				8BDF976A23F4747300680246 /* AppDelegate.swift in Sources */,
-				8BDF976C23F4747300680246 /* SceneDelegate.swift in Sources */,
-				8BDF977E23F4760400680246 /* ViewControllerMenu.swift in Sources */,
-				8BB265BD23FB47B700695D54 /* ButtonValue.swift in Sources */,
+				8B2EFF5823FEFC2400865DA7 /* ViewController.swift in Sources */,
+				8B2EFF5423FEFC2400865DA7 /* AppDelegate.swift in Sources */,
+				8B2EFF5623FEFC2400865DA7 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		8BDF976F23F4747300680246 /* Main.storyboard */ = {
+		8B2EFF5923FEFC2400865DA7 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				8BDF977023F4747300680246 /* Base */,
+				8B2EFF5A23FEFC2400865DA7 /* Base */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
-		8BDF977423F4747500680246 /* LaunchScreen.storyboard */ = {
+		8B2EFF5E23FEFC2C00865DA7 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				8BDF977523F4747500680246 /* Base */,
+				8B2EFF5F23FEFC2C00865DA7 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -174,7 +166,7 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
-		8BDF977823F4747500680246 /* Debug */ = {
+		8B2EFF6223FEFC2C00865DA7 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -234,7 +226,7 @@
 			};
 			name = Debug;
 		};
-		8BDF977923F4747500680246 /* Release */ = {
+		8B2EFF6323FEFC2C00865DA7 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -288,36 +280,36 @@
 			};
 			name = Release;
 		};
-		8BDF977B23F4747500680246 /* Debug */ = {
+		8B2EFF6523FEFC2C00865DA7 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = WDD37DUBTL;
-				INFOPLIST_FILE = ButtonGuessingGame/Info.plist;
+				INFOPLIST_FILE = PhotoTaker/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.kobienikka.ButtonGuessingGame;
+				PRODUCT_BUNDLE_IDENTIFIER = com.kobienikka.PhotoTaker;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
-		8BDF977C23F4747500680246 /* Release */ = {
+		8B2EFF6623FEFC2C00865DA7 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = WDD37DUBTL;
-				INFOPLIST_FILE = ButtonGuessingGame/Info.plist;
+				INFOPLIST_FILE = PhotoTaker/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.kobienikka.ButtonGuessingGame;
+				PRODUCT_BUNDLE_IDENTIFIER = com.kobienikka.PhotoTaker;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -327,25 +319,25 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		8BDF976123F4747300680246 /* Build configuration list for PBXProject "ButtonGuessingGame" */ = {
+		8B2EFF4B23FEFC2300865DA7 /* Build configuration list for PBXProject "PhotoTaker" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				8BDF977823F4747500680246 /* Debug */,
-				8BDF977923F4747500680246 /* Release */,
+				8B2EFF6223FEFC2C00865DA7 /* Debug */,
+				8B2EFF6323FEFC2C00865DA7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		8BDF977A23F4747500680246 /* Build configuration list for PBXNativeTarget "ButtonGuessingGame" */ = {
+		8B2EFF6423FEFC2C00865DA7 /* Build configuration list for PBXNativeTarget "PhotoTaker" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				8BDF977B23F4747500680246 /* Debug */,
-				8BDF977C23F4747500680246 /* Release */,
+				8B2EFF6523FEFC2C00865DA7 /* Debug */,
+				8B2EFF6623FEFC2C00865DA7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = 8BDF975E23F4747300680246 /* Project object */;
+	rootObject = 8B2EFF4823FEFC2300865DA7 /* Project object */;
 }
