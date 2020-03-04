@@ -21,15 +21,16 @@ class SinglePhotoViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-//        if captionsList.count >= whichPhoto! {
-//            captionLabel.text = captionsList[whichPhoto! - 1]
-//        }
+        if captionsList.count >= whichPhoto! {
+            captionLabel.text = captionsList[whichPhoto! - 1]
+        }
         imageView.image = image
     }
     
     @IBAction func saveCaption(_ sender: Any) {
         var caption = captionInput.text
         captionsList.append(caption!)
+        captionLabel.text = caption
     }
     
 

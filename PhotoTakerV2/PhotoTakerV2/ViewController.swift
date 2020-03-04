@@ -83,6 +83,8 @@ class ViewController: UIViewController, UINavigationControllerDelegate, UIImageP
             print("cant find viewController")
             return
         }
+        destinationViewController.image = picture
+        destinationViewController.whichPhoto = totalPhotos
         
         navigationController?.pushViewController(destinationViewController, animated: true)
         
