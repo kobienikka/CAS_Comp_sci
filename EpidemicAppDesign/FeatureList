@@ -1,0 +1,19 @@
+1. A "store"(managers, owners, etc) would have their own page where they can list all their stores items in a tableView type menu
+
+2. A user would be able to open the app and immidiately see a list of all the stores in their area and be able to click on them
+
+3. When a user clicks on a store it would open that stores list of items so the use user can view all the items the store has in stock
+
+4. Users would also have a search bar where they could search specific items that they need
+
+5. The items a user searches throught the search bar would open a drop down window with all the stores in their area that have that item in stock. 
+
+6. Everywhere on the app where a store is shown, next to it would be displayed a numbers in miles for the distance from the user to the store. 
+
+7. Each store's page would have a link to google maps where it would then direct you to that store. 
+
+8. Users would have the ability to upvote stores if their information about their products was reliable 
+
+9. users would also be able to upvote or downvote a specific item in a store depending on if that item was truly in stock or not. 
+
+10. Each stores page would have their phone number linked so users could call ahead and ensure that the item their looking for is in stock
