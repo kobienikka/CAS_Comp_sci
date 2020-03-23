@@ -11,6 +11,7 @@ import UIKit
 class ViewController: UIViewController,  UIImagePickerControllerDelegate, UINavigationControllerDelegate  {
 
     var filter: String = ""
+    var inputImage: UIImage?
     @IBOutlet weak var imageView: UIImageView!
     
     override func viewDidLoad() {
@@ -21,38 +22,44 @@ class ViewController: UIViewController,  UIImagePickerControllerDelegate, UINavi
         func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
             self.dismiss(animated: true, completion: nil)
             let image = info[UIImagePickerController.InfoKey.originalImage] as! UIImage
+            inputImage = image
+            imageView.image = inputImage
             
-            let inputImage = image
-            let context = CIContext(options: nil)
+        }
+    
+    func changeFilter() {
+        let context = CIContext(options: nil)
+        
+        if let filter = CIFilter(name: filter) {
+            let beginImage = CIImage(image: inputImage!)
+            filter.setDefaults()
+            filter.setValue(beginImage, forKey: kCIInputImageKey)
             
-            if let filter = CIFilter(name: filter) {
-                let beginImage = CIImage(image: inputImage)
-                filter.setDefaults()
-                filter.setValue(beginImage, forKey: kCIInputImageKey)
-                
-                if let output = filter.outputImage {
-                    if let cgimg = context.createCGImage(output, from: output.extent) {
-                        let processedImage = UIImage(cgImage: cgimg)
-                        imageView.image = processedImage
-                    }
+            if let output = filter.outputImage {
+                if let cgimg = context.createCGImage(output, from: output.extent) {
+                    let processedImage = UIImage(cgImage: cgimg, scale: 1, orientation: inputImage!.imageOrientation)
+                    imageView.image = processedImage
                 }
             }
         }
-
+    }
     
 
     @IBAction func sepiaButton(_ sender: Any) {
         filter = "CISepiaTone"
+        changeFilter()
     }
     
     @IBAction func chromeButton(_ sender: Any) {
         filter = "CIPhotoEffectChrome"
+        changeFilter()
     }
     @IBAction func noirButton(_ sender: Any) {
         filter = "CIPhotoEffectNoir"
+        changeFilter()
     }
-   
-    @IBAction func takePhoto(_ sender: Any) {
+    
+    @IBAction func takePicture(_ sender: Any) {
         if UIImagePickerController.isSourceTypeAvailable(UIImagePickerController.SourceType.camera) {
             
             let imagePicker = UIImagePickerController()
@@ -63,4 +70,5 @@ class ViewController: UIViewController,  UIImagePickerControllerDelegate, UINavi
         }
     }
 }
+
 
