@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15510"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="MapFinder" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rkB-Qh-qGi">
+                                <rect key="frame" x="0.0" y="808" width="207" height="24"/>
+                                <color key="backgroundColor" systemColor="systemOrangeColor" red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" name="AmericanTypewriter" family="American Typewriter" pointSize="20"/>
+                                <state key="normal" title=" Zoom Out" image="minus.magnifyingglass" catalog="system"/>
+                                <connections>
+                                    <action selector="zoomOut:" destination="BYZ-38-t0r" eventType="touchUpInside" id="whU-pm-oFQ"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cP7-YX-CVU">
+                                <rect key="frame" x="207" y="808" width="207" height="24"/>
+                                <color key="backgroundColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" name="AmericanTypewriter" family="American Typewriter" pointSize="20"/>
+                                <state key="normal" title=" Zoom In" image="plus.magnifyingglass" catalog="system"/>
+                                <connections>
+                                    <action selector="zoomIn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="153-mb-whi"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FTY-e3-0oz">
+                                <rect key="frame" x="0.0" y="44" width="414" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WHY-s7-4Xy">
+                                <rect key="frame" x="0.0" y="832" width="138" height="30"/>
+                                <state key="normal" title="Crossroads"/>
+                                <connections>
+                                    <action selector="goToCrossroads:" destination="BYZ-38-t0r" eventType="touchUpInside" id="f3w-l1-HzV"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qKB-nz-zbU">
+                                <rect key="frame" x="138" y="832" width="138" height="30"/>
+                                <state key="normal" title="EIffel Tower"/>
+                                <connections>
+                                    <action selector="goToEiffelTower:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Aw1-6y-mrw"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TTJ-P6-JF5">
+                                <rect key="frame" x="276" y="832" width="138" height="30"/>
+                                <state key="normal" title="Chick Fil A"/>
+                                <connections>
+                                    <action selector="goToChicken:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Noc-J4-SO8"/>
+                                </connections>
+                            </button>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="qFb-sR-vUY">
+                                <rect key="frame" x="0.0" y="64.5" width="414" height="743.5"/>
+                            </mapView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="TTJ-P6-JF5" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="3en-kY-I3M"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="qKB-nz-zbU" secondAttribute="bottom" id="5D9-2w-v2a"/>
+                            <constraint firstItem="TTJ-P6-JF5" firstAttribute="leading" secondItem="qKB-nz-zbU" secondAttribute="trailing" id="7B2-Eq-AdR"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="cP7-YX-CVU" secondAttribute="trailing" id="7bx-Wa-qeW"/>
+                            <constraint firstItem="qKB-nz-zbU" firstAttribute="top" secondItem="cP7-YX-CVU" secondAttribute="bottom" id="806-ig-Txg"/>
+                            <constraint firstItem="TTJ-P6-JF5" firstAttribute="width" secondItem="WHY-s7-4Xy" secondAttribute="width" id="88f-CO-3Uk"/>
+                            <constraint firstItem="TTJ-P6-JF5" firstAttribute="height" secondItem="WHY-s7-4Xy" secondAttribute="height" id="9IY-Yg-FB2"/>
+                            <constraint firstItem="WHY-s7-4Xy" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="CMt-0n-EgI"/>
+                            <constraint firstItem="rkB-Qh-qGi" firstAttribute="top" secondItem="qFb-sR-vUY" secondAttribute="bottom" id="FNg-ij-8no"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="TTJ-P6-JF5" secondAttribute="bottom" id="HTB-Pi-6KR"/>
+                            <constraint firstItem="TTJ-P6-JF5" firstAttribute="top" secondItem="cP7-YX-CVU" secondAttribute="bottom" id="Mj4-wI-7KG"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="FTY-e3-0oz" secondAttribute="trailing" id="RlS-U4-fIB"/>
+                            <constraint firstItem="cP7-YX-CVU" firstAttribute="width" secondItem="rkB-Qh-qGi" secondAttribute="width" id="Tuk-BK-aQ4"/>
+                            <constraint firstItem="qFb-sR-vUY" firstAttribute="top" secondItem="FTY-e3-0oz" secondAttribute="bottom" id="VWX-9k-uVp"/>
+                            <constraint firstItem="qKB-nz-zbU" firstAttribute="leading" secondItem="WHY-s7-4Xy" secondAttribute="trailing" id="Yls-gV-VYg"/>
+                            <constraint firstItem="qKB-nz-zbU" firstAttribute="height" secondItem="WHY-s7-4Xy" secondAttribute="height" id="YxZ-jK-NJn"/>
+                            <constraint firstItem="rkB-Qh-qGi" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="ZvE-9o-5sw"/>
+                            <constraint firstItem="cP7-YX-CVU" firstAttribute="leading" secondItem="rkB-Qh-qGi" secondAttribute="trailing" id="cho-a2-3eH"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="WHY-s7-4Xy" secondAttribute="bottom" id="dkR-6M-HKo"/>
+                            <constraint firstItem="qKB-nz-zbU" firstAttribute="width" secondItem="WHY-s7-4Xy" secondAttribute="width" id="dqg-4l-bRa"/>
+                            <constraint firstItem="qFb-sR-vUY" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="hOP-8d-i53"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="qFb-sR-vUY" secondAttribute="trailing" id="jsC-Ol-byr"/>
+                            <constraint firstItem="qFb-sR-vUY" firstAttribute="top" secondItem="FTY-e3-0oz" secondAttribute="bottom" id="k8T-5r-xKp"/>
+                            <constraint firstItem="cP7-YX-CVU" firstAttribute="height" secondItem="rkB-Qh-qGi" secondAttribute="height" id="lnf-Jy-GRo"/>
+                            <constraint firstItem="FTY-e3-0oz" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="lsb-dl-ZyE"/>
+                            <constraint firstItem="qKB-nz-zbU" firstAttribute="top" secondItem="rkB-Qh-qGi" secondAttribute="bottom" id="pDA-2Y-sUW"/>
+                            <constraint firstItem="cP7-YX-CVU" firstAttribute="top" secondItem="qFb-sR-vUY" secondAttribute="bottom" id="uyA-Kb-8Q7"/>
+                            <constraint firstItem="rkB-Qh-qGi" firstAttribute="top" secondItem="qFb-sR-vUY" secondAttribute="bottom" id="vuh-ob-Avu"/>
+                            <constraint firstItem="WHY-s7-4Xy" firstAttribute="top" secondItem="rkB-Qh-qGi" secondAttribute="bottom" id="yNg-FB-mIt"/>
+                            <constraint firstItem="FTY-e3-0oz" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="zxU-Ph-ghN"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="chickenButton" destination="TTJ-P6-JF5" id="V7W-yU-T5Y"/>
+                        <outlet property="crossroadsButton" destination="WHY-s7-4Xy" id="IjT-dK-yvN"/>
+                        <outlet property="crossroadsLabel" destination="FTY-e3-0oz" id="N4R-CK-7ru"/>
+                        <outlet property="mapView" destination="qFb-sR-vUY" id="nne-Hg-siF"/>
+                        <outlet property="towerButton" destination="qKB-nz-zbU" id="Bow-Ov-uGi"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="137.68115942028987" y="117.85714285714285"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="minus.magnifyingglass" catalog="system" width="64" height="56"/>
+        <image name="plus.magnifyingglass" catalog="system" width="64" height="56"/>
+    </resources>
+</document>
