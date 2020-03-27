@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15510"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="MapFinderPersonalLocation" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OcC-Xi-VWE">
+                                <rect key="frame" x="0.0" y="802" width="207" height="24"/>
+                                <color key="backgroundColor" systemColor="systemOrangeColor" red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" name="AmericanTypewriter" family="American Typewriter" pointSize="20"/>
+                                <state key="normal" title=" Zoom Out" image="minus.magnifyingglass" catalog="system"/>
+                                <connections>
+                                    <action selector="zoomOut:" destination="BYZ-38-t0r" eventType="touchUpInside" id="GcB-qH-Yih"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5vv-Qj-DrC">
+                                <rect key="frame" x="207" y="802" width="207" height="24"/>
+                                <color key="backgroundColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" name="AmericanTypewriter" family="American Typewriter" pointSize="20"/>
+                                <state key="normal" title=" Zoom In" image="plus.magnifyingglass" catalog="system"/>
+                                <connections>
+                                    <action selector="zoomIn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="p1c-53-Z9k"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6T8-Mf-Sbe">
+                                <rect key="frame" x="0.0" y="826" width="414" height="36"/>
+                                <color key="backgroundColor" systemColor="linkColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" name="AmericanTypewriter" family="American Typewriter" pointSize="20"/>
+                                <state key="normal" title="Find Me Now"/>
+                                <connections>
+                                    <action selector="findMe:" destination="BYZ-38-t0r" eventType="touchUpInside" id="b1e-1a-8mL"/>
+                                </connections>
+                            </button>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="p5W-j8-GJz">
+                                <rect key="frame" x="0.0" y="99.5" width="414" height="702.5"/>
+                            </mapView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="It's Crossroads!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4No-57-OWO">
+                                <rect key="frame" x="0.0" y="44" width="414" height="32.5"/>
+                                <fontDescription key="fontDescription" name="AmericanTypewriter" family="American Typewriter" pointSize="28"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Abb-xd-rWw">
+                                <rect key="frame" x="0.0" y="76.5" width="414" height="23"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="Abb-xd-rWw" firstAttribute="top" secondItem="4No-57-OWO" secondAttribute="bottom" id="1AI-5A-mH0"/>
+                            <constraint firstItem="Abb-xd-rWw" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="1JJ-qs-keo"/>
+                            <constraint firstItem="p5W-j8-GJz" firstAttribute="top" secondItem="Abb-xd-rWw" secondAttribute="bottom" id="1Vv-W4-6g8"/>
+                            <constraint firstItem="OcC-Xi-VWE" firstAttribute="top" secondItem="p5W-j8-GJz" secondAttribute="bottom" id="3Bu-4K-jxi"/>
+                            <constraint firstItem="OcC-Xi-VWE" firstAttribute="top" secondItem="p5W-j8-GJz" secondAttribute="bottom" id="3ac-tD-4wV"/>
+                            <constraint firstItem="4No-57-OWO" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="4V4-Ja-yLS"/>
+                            <constraint firstItem="6T8-Mf-Sbe" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="4Wg-cn-lzA"/>
+                            <constraint firstItem="OcC-Xi-VWE" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="5kQ-9O-LCA"/>
+                            <constraint firstItem="6T8-Mf-Sbe" firstAttribute="top" secondItem="OcC-Xi-VWE" secondAttribute="bottom" id="6NI-5L-paf"/>
+                            <constraint firstItem="p5W-j8-GJz" firstAttribute="top" secondItem="Abb-xd-rWw" secondAttribute="bottom" id="8H9-Bx-VV4"/>
+                            <constraint firstItem="OcC-Xi-VWE" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="AGK-eQ-862"/>
+                            <constraint firstItem="5vv-Qj-DrC" firstAttribute="width" secondItem="OcC-Xi-VWE" secondAttribute="width" id="Ahh-YS-hxb"/>
+                            <constraint firstItem="6T8-Mf-Sbe" firstAttribute="top" secondItem="5vv-Qj-DrC" secondAttribute="bottom" id="Cnb-w4-mGc"/>
+                            <constraint firstItem="6T8-Mf-Sbe" firstAttribute="top" secondItem="OcC-Xi-VWE" secondAttribute="bottom" id="EkE-I6-tAp"/>
+                            <constraint firstItem="p5W-j8-GJz" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="GFW-tI-37y"/>
+                            <constraint firstItem="5vv-Qj-DrC" firstAttribute="top" secondItem="p5W-j8-GJz" secondAttribute="bottom" id="M6e-GK-kAm"/>
+                            <constraint firstItem="p5W-j8-GJz" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="NGu-yz-K2O"/>
+                            <constraint firstItem="5vv-Qj-DrC" firstAttribute="leading" secondItem="OcC-Xi-VWE" secondAttribute="trailing" id="OC7-Q9-Tk4"/>
+                            <constraint firstItem="5vv-Qj-DrC" firstAttribute="leading" secondItem="OcC-Xi-VWE" secondAttribute="trailing" id="Qv1-IE-cbg"/>
+                            <constraint firstItem="6T8-Mf-Sbe" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="RGP-dy-eIF"/>
+                            <constraint firstItem="OcC-Xi-VWE" firstAttribute="top" secondItem="p5W-j8-GJz" secondAttribute="bottom" id="RUc-fz-adD"/>
+                            <constraint firstItem="6T8-Mf-Sbe" firstAttribute="top" secondItem="5vv-Qj-DrC" secondAttribute="bottom" id="SAq-Jc-hw5"/>
+                            <constraint firstItem="6T8-Mf-Sbe" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="U3r-IB-g2w"/>
+                            <constraint firstItem="Abb-xd-rWw" firstAttribute="top" secondItem="4No-57-OWO" secondAttribute="bottom" id="XA9-P8-OFl"/>
+                            <constraint firstItem="p5W-j8-GJz" firstAttribute="top" secondItem="Abb-xd-rWw" secondAttribute="bottom" id="Y6W-W0-VpH"/>
+                            <constraint firstItem="5vv-Qj-DrC" firstAttribute="height" secondItem="OcC-Xi-VWE" secondAttribute="height" id="ZCB-4n-AHu"/>
+                            <constraint firstItem="4No-57-OWO" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="die-Fe-U6b"/>
+                            <constraint firstItem="6T8-Mf-Sbe" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="ewt-4x-hcJ"/>
+                            <constraint firstItem="5vv-Qj-DrC" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="hKc-07-8y5"/>
+                            <constraint firstItem="6T8-Mf-Sbe" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="lE6-KG-yVJ"/>
+                            <constraint firstItem="4No-57-OWO" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="oEP-EG-CZD"/>
+                            <constraint firstItem="Abb-xd-rWw" firstAttribute="top" secondItem="4No-57-OWO" secondAttribute="bottom" id="tOb-3d-M9a"/>
+                            <constraint firstItem="4No-57-OWO" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="tWE-QK-639"/>
+                            <constraint firstItem="5vv-Qj-DrC" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="wdr-5I-gEl"/>
+                            <constraint firstItem="Abb-xd-rWw" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="x45-0M-zuv"/>
+                            <constraint firstItem="6T8-Mf-Sbe" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="yzx-Nm-1vB"/>
+                            <constraint firstItem="5vv-Qj-DrC" firstAttribute="top" secondItem="p5W-j8-GJz" secondAttribute="bottom" id="zKj-VH-yyx"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="distanceLabel" destination="Abb-xd-rWw" id="HxP-Fb-W4G"/>
+                        <outlet property="kobieLabel" destination="4No-57-OWO" id="Smi-ex-PaC"/>
+                        <outlet property="mapView" destination="p5W-j8-GJz" id="xeS-qZ-doj"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="137.68115942028987" y="117.85714285714285"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="minus.magnifyingglass" catalog="system" width="64" height="56"/>
+        <image name="plus.magnifyingglass" catalog="system" width="64" height="56"/>
+    </resources>
+</document>
