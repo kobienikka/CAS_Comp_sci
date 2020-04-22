@@ -11,7 +11,7 @@ import SpriteKit
 class GameManager {
     var scene: GameScene!
     var nextTime: Double?
-    var timeExtension: Double = 0.15
+    var timeExtension: Double = 0.25
     var playerDirection: Int = 4
     var currentScore: Int = 0
     
@@ -35,12 +35,31 @@ class GameManager {
             randomY = CGFloat(arc4random_uniform(39))
         }
         scene.scorePos = CGPoint(x: randomX, y: randomY)
+        print(currentScore)
+        changeSpeed()
+        
     }
     
     func renderChange() {
         for (node, x, y) in scene.gameArray {
             if contains(a: scene.playerPositions, v: (x,y)) {
-                node.fillColor = SKColor.cyan
+                if currentScore >= 21 {
+                    node.fillColor = SKColor.systemTeal
+                } else if currentScore >= 18 {
+                    node.fillColor = SKColor.green
+                } else if currentScore >= 15 {
+                    node.fillColor = SKColor.white
+                } else if currentScore >= 12 {
+                    node.fillColor = SKColor.yellow
+                } else if currentScore >= 9 {
+                    node.fillColor = SKColor.systemIndigo
+                } else if currentScore >= 6 {
+                    node.fillColor = SKColor.purple
+                } else if currentScore >= 3 {
+                    node.fillColor = SKColor.orange
+                } else if currentScore >= 0 {
+                    node.fillColor = SKColor.cyan
+                }
             } else {
                 node.fillColor = SKColor.clear
                 if scene.scorePos != nil {
@@ -116,14 +135,14 @@ class GameManager {
         if scene.playerPositions.count > 0 {
             let x = scene.playerPositions[0].1
             let y = scene.playerPositions[0].0
-            if y > 40 {
+            if y > 39 {
                 scene.playerPositions[0].0 = 0
             } else if y < 0 {
-                scene.playerPositions[0].0 = 40
-            } else if x > 20 {
+                scene.playerPositions[0].0 = 39
+            } else if x > 19 {
                 scene.playerPositions[0].1 = 0
             } else if x < 0 {
-                scene.playerPositions[0].1 = 20
+                scene.playerPositions[0].1 = 19
             }
         }
         
@@ -205,7 +224,18 @@ class GameManager {
             UserDefaults.standard.set(currentScore, forKey: "bestScore")
         }
         currentScore = 0
-        scene.currentScore.text = "Score: 0"
+        scene.currentScore.text = "Score: \(currentScore)"
         scene.bestScore.text = "Best Score: \(UserDefaults.standard.integer(forKey: "bestScore"))"
+        }
+    
+    func changeSpeed() {
+        if currentScore % 3 == 0, currentScore > 0 {
+            if timeExtension > 0 {
+                timeExtension -= 0.025
+            }
+            print(timeExtension)
+        }
     }
 }
+
+
