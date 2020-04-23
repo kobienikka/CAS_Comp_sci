@@ -153,15 +153,16 @@ class GameScene: SKScene {
     }
     
     private func createGameBoard(width: Int, height: Int) {
-        let cellWidth: CGFloat = 27.5
+        let cellWidth: CGFloat = CGFloat(width) / CGFloat(20)
+        let cellHeight: CGFloat = CGFloat(height) / CGFloat(40)
         let numRows = 40
         let numCols = 20
         var x = CGFloat(width / -2) + (cellWidth / 2)
-        var y = CGFloat(height / 2) + (cellWidth / 2)
+        var y = CGFloat(height / 2) - (cellWidth / 2)
         
         for i in 0...numRows - 1 {
             for j in 0...numCols - 1 {
-                let cellNode = SKShapeNode(rectOf: CGSize(width: cellWidth, height: cellWidth))
+                let cellNode = SKShapeNode(rectOf: CGSize(width: cellWidth, height: cellHeight))
                 cellNode.strokeColor = SKColor.black
                 cellNode.zPosition = 2
                 cellNode.position = CGPoint(x: x, y:y)
